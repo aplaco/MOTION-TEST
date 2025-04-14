@@ -1,0 +1,14 @@
+@use "reset";
+
+#wrap {
+  width: 1000px;
+  height: 700px;
+  border: 1px solid gray;
+  margin: 100px auto;
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background: aqua;
+  }
+}
