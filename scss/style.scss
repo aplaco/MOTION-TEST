@@ -39,6 +39,12 @@
       color: white;
       cursor: pointer;
     }
+    p {
+      font-size: 1.6rem;
+      color: white;
+      display: none;
+      cursor: pointer;
+    }
   }
 
   .textBox {
@@ -106,6 +112,9 @@
     header {
       .gnb {
         display: none;
+      }
+      p {
+        display: block;
       }
     }
 

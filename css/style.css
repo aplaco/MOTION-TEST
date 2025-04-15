@@ -49,6 +49,12 @@ ul, ol, li {
   color: white;
   cursor: pointer;
 }
+#wrap header p {
+  font-size: 1.6rem;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
 #wrap .textBox {
   position: absolute;
   top: 50%;
@@ -105,6 +111,9 @@ ul, ol, li {
 @media screen and (max-width: 849px) {
   #wrap header .gnb {
     display: none;
+  }
+  #wrap header p {
+    display: block;
   }
   #wrap .textBox h2 {
     font-size: 15vw;
