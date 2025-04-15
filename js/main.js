@@ -7,7 +7,9 @@ const line = document.querySelector(".line");
 const sns = document.querySelectorAll(".sns li");
 const copyright = document.querySelector("footer p");
 
-//scss에서 초기 위치값을 수정하는 것이 아닌 set으로 초기위치값 변경
+//각 모션을 동기화처리하기 위해 timeline객체 생성후 변수에 할당
+const tl = gsap.timeline();
+
 gsap.set(bgVideo, { opacity: 0 });
 gsap.set(title, { y: -100, opacity: 0 });
 gsap.set(btnOpen, { scale: 5, opacity: 0 });
@@ -19,10 +21,10 @@ gsap.set(copyright, { y: -100 });
 
 //로딩 완료시 초기 모션 설정
 gsap.to(bgVideo, { opacity: 0.8, duration: 2 });
-gsap.to(title, { y: 0, opacity: 1, duration: 1, delay: 1 });
-gsap.to(btnOpen, { scale: 1, opacity: 1, duration: 0.5, delay: 1.5 });
-gsap.to(logo, { y: 0, opacity: 1, duration: 1, delay: 2 });
-gsap.to(menus, { y: 0, opacity: 1, duration: 1, delay: 2, stagger: 0.2 });
-gsap.to(line, { width: "100%", duration: 1, delay: 2 });
-gsap.to(sns, { y: 0, duration: 0.5, delay: 2.5, stagger: 0.2 });
-gsap.to(copyright, { y: 0, duration: 0.5, delay: 3 });
+tl.to(title, { y: 0, opacity: 1, duration: 1, delay: 1 });
+tl.to(btnOpen, { scale: 1, opacity: 1, duration: 0.5 });
+tl.to(logo, { y: 0, opacity: 1, duration: 1 });
+tl.to(menus, { y: 0, opacity: 1, duration: 1, stagger: 0.2 });
+tl.to(line, { width: "100%", duration: 1 });
+tl.to(sns, { y: 0, duration: 0.5, stagger: 0.2 });
+tl.to(copyright, { y: 0, duration: 0.5 });
