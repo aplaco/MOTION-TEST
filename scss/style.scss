@@ -14,7 +14,6 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    opacity: 0.4;
   }
 
   .textBox {
@@ -23,11 +22,20 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    text-align: center;
 
     h2 {
       font-size: 10vw;
+      font-weight: normal;
       color: white;
       font-family: "LimeLight";
+    }
+    .btnOpen {
+      display: inline-block;
+      padding: 7px 30px;
+      border: 1px solid white;
+      font-size: 0.8rem/1 "arial";
+      color: white;
     }
   }
 }
